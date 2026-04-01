@@ -1,0 +1,41 @@
+{
+  "name": "opencrab",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tsx src/bot_index.ts",
+    "dashboard": "npx tsx src/services/dashboardServer.ts",
+    "setup": "npx tsx src/setup.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "opencrab": "./bin/opencrab.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "package.json",
+    "README.md",
+    "tsconfig.json"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/inquirer": "^9.0.9",
+    "@types/node": "^25.5.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "@larksuiteoapi/node-sdk": "^1.60.0",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "inquirer": "^9.3.8",
+    "playwright": "^1.59.0"
+  }
+}
