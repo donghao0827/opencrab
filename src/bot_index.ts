@@ -111,7 +111,8 @@ async function main() {
             prefix = 'feat:';
           }
 
-          const tempBranch = git.commitLocal(`${prefix} ${prompt}`, checkPath);
+          const commitMsg = prefix.endsWith(':') ? prefix.slice(0, -1) : prefix;
+          const tempBranch = git.commitLocal(commitMsg, checkPath);
           DashboardService.updateTask(taskId, { status: 'committing' }); // 节点化：同步中
           const mergeToFeature = await git.mergeToDeploy(tempBranch, project.branch, project.path);
           
